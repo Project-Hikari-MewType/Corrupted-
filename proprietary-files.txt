@@ -1439,7 +1439,6 @@ vendor/bin/batterysecret
 vendor/etc/init/hw/init.batterysecret.rc
 
 # Connectivity
-vendor/bin/conninfra_loader
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/init.connfem.rc
