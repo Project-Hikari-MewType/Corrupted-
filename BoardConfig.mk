@@ -154,7 +154,7 @@ BOARD_PVMFWIMAGE_PARTITION_SIZE := 20971520
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
 ifeq ($(PRODUCT_SYSTEM_PARTITIONS_FILE_SYSTEM_TYPE),ext4)
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/bliss/config/BoardConfigReservedSize.mk
 endif
 
 BOARD_SUPER_PARTITION_SIZE := 9126805504
@@ -191,7 +191,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SEPolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
+include device/bliss/sepolicy/libion/sepolicy.mk
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
