@@ -1260,3 +1260,5 @@ on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.d
 
 on property:ro.boot.crash_reason=*
   setprop vendor.minidump.crash_reason ${ro.boot.crash_reason}
+  setprop persist.sys.bliss_debug_enabled 1
+  setprop persist.sys.usb.config mtp,adb

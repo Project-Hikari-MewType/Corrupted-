@@ -479,3 +479,10 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/dash/dash-vendor.mk)
+
+# The ROM fingerprint spoof forces ro.debuggable=0 even on eng builds,
+# which disables adb. Restore the eng behavior.
+
+WITH_ADB_INSECURE := true
+PRODUCT_PRODUCT_PROPERTIES += persist.sys.usb.config=mtp,adb
+PRODUCT_SYSTEM_EXT_PROPERTIES += ro.adb.secure=0
